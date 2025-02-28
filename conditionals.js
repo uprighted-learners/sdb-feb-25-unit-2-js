@@ -73,8 +73,8 @@ if (airConditioning) {
 	console.log("The AC is working");
 }
 
-if (2 == 5) {
-	console.log("Falsey expression");
+if (2 !== 5) {
+	console.log("Truthy expression");
 }
 
 if (2 == 2) {
@@ -173,7 +173,19 @@ if (color == "white" && temp == "hot") {
     * if GPA of less than or equal to 1.0, say F
 */
 
-let gpa = 2;
+let gpa = 1.0;
+
+if (gpa == 4.0) {
+	console.log("A");
+} else if (gpa < 4.0) {
+	console.log("B");
+} else if (gpa < 3.0) {
+	console.log("C");
+} else if (gpa < 2.0) {
+	console.log("D");
+} else if (gpa <= 1.0) {
+	console.log("F");
+}
 
 if (gpa <= 1.0) {
 	console.log("F");
@@ -185,4 +197,106 @@ if (gpa <= 1.0) {
 	console.log("B");
 } else if (gpa == 4.0) {
 	console.log("A");
+}
+
+console.log(firstName.toUpperCase());
+
+/* 
+    ? Ternaries
+    * another way of writing conditionals in JS
+    * they are expressions
+    * cannot have return statements
+    * used for easy checks
+    * they MUST have an else statement always
+*/
+
+let isLoggedIn = true;
+
+if (isLoggedIn) {
+	console.log("Logged in");
+} else {
+	console.log("Logged out");
+}
+
+// Ternary Syntax
+// conditional ? expression if true : expression if false
+
+isLoggedIn ? console.log("Logged in") : console.log("Logged out");
+
+let paulIsCool = true;
+
+paulIsCool ? console.log("Duh!") : null;
+
+// Chaining Ternaries
+
+// ? Temperature Challenge
+/*
+ * write a conditional that checks the temperature
+ * have a variable called temp with some number value
+ * if temp >= 80, say summer weather
+ * if temp between 79 and 60, say fall or spring
+ * if temp is below 60, say it's winter
+ */
+
+let temperature = 60;
+
+if (temperature >= 80) console.log("Summer");
+else if (temperature < 80 && temperature > 60) console.log("Spring or Fall");
+else if (temperature <= 60) console.log("Winter");
+
+temperature >= 80
+	? console.log("Summer")
+	: temperature < 80 && temperature > 60
+	? console.log("Spring or Fall")
+	: temperature <= 60
+	? console.log("Winter")
+	: null;
+
+/* 
+    conditional
+        ? expr if true
+        : conditional
+        ? expr if true
+        : conditional
+        ? expr if true
+        : else statement
+*/
+
+/* 
+    ? Switch Statements
+    * evaluates an expression against series of cases
+    * runs them all unless it encounters a break
+    * jumps to next case matching expression
+*/
+
+let num = 68;
+
+switch (true) {
+	case num >= 70:
+		console.log("greater than 70");
+		break;
+	case num >= 60:
+		console.log("greater than 60");
+		break;
+	case num >= 50:
+		console.log("greater than 50");
+		break;
+	default:
+		console.log("Our default value");
+}
+
+let instructor = "Maria";
+
+switch (instructor) {
+	case "Paul":
+		console.log("sdb feb 25");
+		break;
+	case "Amit":
+		console.log("sdb jan 25");
+		break;
+	case "Rob":
+		console.log("has amazing hair");
+		break;
+	// default:
+	// 	console.log("you're not an instructo here");
 }
