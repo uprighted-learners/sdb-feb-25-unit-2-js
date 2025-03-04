@@ -95,3 +95,25 @@ console.log(15 % 2);
     * check if number divisible by 3 AND 5 (print Fizz Buzz)
     * if number is not divisible by any of those conditions, print the number only
 */
+
+console.log("--------------------------------------");
+for (let i = 0; i <= 100; i++) {
+	if (i % 15 === 0) {
+		console.log("Fizz Buzz");
+	} else if (i % 5 === 0) {
+		console.log("Buzz");
+	} else if (i % 3 === 0) {
+		console.log("Fizz");
+	} else {
+		console.log(i);
+	}
+}
+
+/* 
+    ? Challenge Take Home
+    * create a placeholder variable
+    * create a string of names of everyone in the session
+    * loop over the string of names
+    * pass every character into the placeholder variable APART from any vowels
+    * console log the placeholder variable
+*/
