@@ -117,3 +117,21 @@ for (let i = 0; i <= 100; i++) {
     * pass every character into the placeholder variable APART from any vowels
     * console log the placeholder variable
 */
+
+let placeholder = "";
+
+let cohort = "Nikiva Paul Ronnie Jaise Rhojon Missy";
+
+for (i of cohort) {
+	// if (i !== "a" && i !== "e" && i !== "o") {
+	// 	placeholder = placeholder + i;
+	// }
+	if (!(i === "a" || i === "e" || i === "o")) {
+		placeholder = placeholder + i;
+	}
+}
+console.log(placeholder);
+
+for (let i = 0; i <= cohort.length; i++) {
+	console.log("Because for in is easier damnit!");
+}
