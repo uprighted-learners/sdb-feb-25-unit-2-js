@@ -148,3 +148,22 @@ console.log(stringConcatenator("1", 2));
 (function() {
     console.log("This is an IFFE")
 })()
+
+let word = " Hello";
+console.log ("hello")
+
+
+let firstletter ="h";
+console.log ("h");
+
+
+ 
+let str = "hello";
+let restOfWord = str.slice(1);
+console.log (restOfWord);
+
+let firsLetter = "h".toUpperCase;
+console.log (firstletter +restOfWord);
+
+console.log( restOfWord);
+console.log (firstletter + restOfWord);
