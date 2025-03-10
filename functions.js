@@ -162,6 +162,28 @@ console.log(stringConcatenator("1", 2));
   SPICEY MODE: try to return the numbers instead. What's going on?
 */
 
+function fizzBuzz(start, stop) {
+    let result = ""
+    for (let i = start; i <= stop; i++) {
+        if (i % 15 === 0) {
+            // console.log("Fizz Buzz")
+            result += "Fizz Buzz;"
+        } else if (i % 3 === 0) {
+            // console.log("Fizz")
+            result += "Fizz;"
+        } else if (i % 5 === 0) {
+            // console.log("Buzz")
+            result += "Buzz;"
+        } else {
+            // console.log(i)
+            result += `${i};`
+        }
+    }
+    return result
+}
+
+console.log(fizzBuzz(0, 10))
+
 /* 
     ? Reverse Words in a String
     * write a function that takes string as ain input
@@ -169,6 +191,16 @@ console.log(stringConcatenator("1", 2));
     * ex: Paul should return luaP
     * hint: brainstorm the steps required to accomplish this
 */
+
+let reverseStr = function(str) {
+    let result = ""
+    for (let i = str.length - 1; i >= 0; i--) {
+        // console.log(str[i], i)
+        result += str[i]
+    }
+    return result
+}
+console.log(reverseStr("Paul"))
 
 /* 
     ? Pythagoream Theorem Challenge
@@ -181,6 +213,14 @@ console.log(stringConcatenator("1", 2));
     * hint: Math object has a .sqrt() method
 */
 
+let pythagoreanTheorem = (a, b) => {
+    // let result = Math.sqrt(a**2 + b**2)
+    // return result
+    return Math.sqrt(a**2 + b**2)
+}
+
+console.log(pythagoreanTheorem(5, 12))
+
 /* 
     ? Quadratic Formula Challenge
     * Create a function that will give you a result of a quadratic formula based on all of the necessary factors
@@ -191,3 +231,18 @@ console.log(stringConcatenator("1", 2));
     
     -b+-sqrt(b**2 -4ac)/2a
 */
+
+function quadraticFormula(a, b, c) {
+    let sqrtResult = Math.sqrt(b**2 - 4 * a * c)
+    console.log(sqrtResult)
+    if (isNaN(sqrtResult)) {
+        return "Please make sure you're using whole numbers which results in positive discriminant"
+    } else {
+        let addResult = ((-b + sqrtResult) / 2 * a)
+        let subResult = ((-b - sqrtResult) / 2 * a)
+        return `The solution is ${addResult} and ${subResult}`
+    }
+}
+
+console.log(quadraticFormula(4, 12, 17))
+console.log(quadraticFormula(1, -11, 24))
